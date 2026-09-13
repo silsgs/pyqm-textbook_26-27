@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 15f9f122-781d-4ae6-9001-7d229094d5eb
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/silsgs/pyqm-textbook_26-27
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

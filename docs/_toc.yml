@@ -1,0 +1,72 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+
+parts:
+  - caption: Course content
+    chapters:
+
+      - file: 01_all/Week1-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 01_all/01_01_setting_env.ipynb
+        - file: 01_all/01_02_git_github.ipynb
+        - file: 01_all/01_03_python_funds.ipynb
+        - file: 01_all/exercises/week1-ex1.ipynb
+        - file: 01_all/exercises/week1-tut1.ipynb
+
+      - file: 02_all/Week2-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 02_all/02_00-recap.ipynb 
+        - file: 02_all/02_01-flow_control.ipynb
+        - file: 02_all/02_02-compact-code.ipynb
+        - file: 02_all/02_03-external-data.ipynb
+        - file: 02_all/02_04-cheatsheet.ipynb
+        - file: 02_all/exercises/week2_Ex2.ipynb
+        - file: 02_all/exercises/week2_Tut2.ipynb
+
+      - file: 03_all/Week3-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 03_all/03_01-function.ipynb 
+        - file: 03_all/03_02-classes.ipynb 
+        #- file: 03_all/exercises/week3_Ex3.ipynb
+        #- file: 03_all/exercises/week3_Tut3.ipynb
+
+      - file: 04_all/Week4-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 04_all/04_00-importing-libs.ipynb
+        - file: 04_all/04_01-numpy-basics.ipynb
+        - file: 04_all/04_02-matplotlib.ipynb
+
+      - file: 05_all/Week5-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 05_all/05_01-scipy.ipynb
+
+      - file: 06_all/Week6-intro.md
+        options:
+          numbered: false
+        sections:
+        - file: 06_all/06_00_installation.ipynb
+        - file: 06_all/06_01_qiskit.ipynb
+        - file: 06_all/06_02_qutip.ipynb
+
+      - file: 07_all/07_0X_template.ipynb
+        options:
+          numbered: false
+        sections:
+        - file: 07_all/07_01_problem.ipynb
+        - file: 07_all/07_02_problem.ipynb
+        - file: 07_all/07_03_problem.ipynb
+        - file: 07_all/07_04_spin.ipynb
+        #- file: 07_all/hackathon_dataset_description.ipynb

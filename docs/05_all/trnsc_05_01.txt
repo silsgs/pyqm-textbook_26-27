@@ -1,0 +1,690 @@
+[Music]
+hi guys we're back again for week six of
+python for quantum mechanics this week
+we will be looking at scipy now this
+week is split into five sections
+uh the first section is going to be
+linear algebra and a lot of this section
+kind of repeats over what we did in
+numpy
+however there is added functionality
+that we'll be looking at specifically
+and
+there are also some parts that i'm going
+to leave in the notebooks that i won't
+do in this video tutorial
+and they will be
+for you to explore on your own if you
+want to it's kind of at your leisure
+they're not actually necessary
+and that'll be the same for the rest of
+the sections in this week
+just because it's such an extensive and
+expansive week
+filled with so much material that there
+isn't there simply just isn't enough
+time to cover it in let's say an hour
+and a half of lectures
+so
+the first the first section as i said is
+linear algebra the second is going to be
+optimization so solving minimization
+problems essentially
+and the third is
+statistics the fourth is going to be for
+your transforms
+in particular we're going to get a
+deeper dive into the quantum fourier
+transform which is going to be very
+interesting as you'll see
+and then the fifth section is going to
+be all about solving odes and pdes
+in particular we're going to be looking
+at
+the
+schrodinger equation
+okay so let's get started off with 6.1
+uh we're going to run through
+linear systems
+matrix functions we're going to look
+back at spectral decomposition with
+scipy instead of numpy
+we're going to take a look at special
+matrices in particular the hadamard
+matrix now a really important section is
+going to be sparse matrices and working
+with sparse matrices
+and really speeds up with computation of
+what you're doing especially when you're
+working with gigantic matrices
+then we're going to take a look at the
+metro matrix exponential
+then unitary matrices the tensor product
+and the least square fit
+i'm going to leave out the last two
+sections for you to do on your own if
+you want to
+okay so let's get started with linear
+systems
+[Music]
+okay
+so we're going to start off with some
+basic linear algebra
+the first problems you learned to solve
+in
+your linear algebra studies is how to
+solve one of these linear systems where
+you have either
+a matrix a
+and a vector
+x and a vector b
+and then you have to solve the equation
+a x equals b
+uh or similarly you could have
+all three of them as matrices so a is a
+matrix x matrix b is matrix and then you
+need to solve the equation ax equals b
+assuming you know a and b of course
+and this is very easy to do inside by we
+just use this function scipy dot linear
+algebra dot solve
+so here i'm going to create two
+matrices or i make
+and a vector
+and then i'm just going to plug these
+into the function and this should pop
+out
+the solution
+x equals this vector 4 10 and 1.
+the same thing goes for
+the matrix equivalent it works in the
+exact same fashion
+and another thing we're going to do here
+is
+now this isn't particularly necessary in
+this case but it might be something you
+want to do
+or
+any matrices you might obtain in your
+in your studies
+is to plot the matrix
+using in show
+and this allows you to visualize the
+matrix this can be useful
+sometimes depending if there's like if
+you're expecting some sort of pattern to
+appear in the matrix then you might want
+to use it
+here it um it doesn't really
+give any sort of enlightenment
+at least not to my eyes
+okay so we're gonna
+cut it there and we're gonna move to the
+next section
+[Music]
+so now we're gonna take a look at some
+common matrix functions you can use in
+scipy again this kind of calls back to
+the same functionality as in numpy
+however as we'll see at the end there's
+some additional things we can do
+so we have the same kind of traditional
+functions we have inverse determinant
+and then there's this function called
+the norm which we'll get to later
+and so we have a matrix a as input for
+each of these
+and i've generated this as a random
+matrix here
+so we can compute its inverse
+very simply using psi by dot linear
+algebra inverse
+it's determinant
+i'm not going to spend too much time on
+this just because you already know it
+and things get a bit more interesting
+here with this norm function
+so when you're getting say a
+normalization factor
+and conventionally you'll use the square
+root slash square normalization so you
+will take say
+a and b square them both add them and
+then take the square root of
+their sum
+so
+we can actually specify
+the order of that operation so normally
+that would be equal to 2 the square root
+square
+we can set that to any number we like
+however
+if we set it to infinity
+then this function will actually return
+the maximum value of whatever the uh of
+the array you put in and if we set it to
+negative infinity
+then it is returned as the minimum
+so let's do some examples
+if we set the order to 1
+this will simply return the sum of the
+inputed array
+if we set the order to 2 again this will
+give the squared sum then take the
+square root
+the order of 3 will be the cubed sum and
+then the cubed root
+see the pattern and then negative
+infinity will give the minimum we should
+expect that and infinity will give the
+maximum
+so we see that this is the case here
+these numbers come to 14 you can check
+that if you want to
+then the order equals 2 or equals 3
+gives these numbers
+and the negative infinity should give
+the minimum which in our array is
+1
+so that makes sense and then infinity
+gives the maximum and that gives four
+okay so this can be useful if you want
+some
+alternatives to a regular normalization
+or if you just want to use that
+normalization
+and okay so let's move on to the next
+section
+[Music]
+okay so we're going to take a very very
+quick look at spectral decomposition
+this is done in the exact same way as we
+did in numpy so you have this
+function psi pi dot
+linear
+algebra.eigenvector or ig
+and or eigenvalue eigenvector
+and this gives you
+a tuple of two arrays one that gives you
+the eigenvalues and one that gives you a
+matrix of eigenvectors
+and then you can pull out the
+eigenvalues and eigenvectors by
+assigning them to a tuple and then you
+can pull out individual eigenvectors
+using slicing if you if you need to
+okay so i'm not going to go into further
+detail here you saw how we use this in
+week four
+so let's quickly move on to the next
+section
+[Music]
+so one of the useful things in scipy is
+that it supports the use of predefined
+matrices that we call special matrices
+a full list of these can be found here
+and here we're just going to focus on
+the hadamard as we will be using that in
+quantum computing quite frequently
+so very simply you just call linear
+algebra.hadamard and then set to
+dimension
+here we have dimension equal to two
+as you can see we get a two-dimensional
+matrices matrix 1 1 1 and -1
+normally you would see a normalization
+coefficient attached to this 1 over root
+2.
+so beware if you're actually using that
+in your calculations
+so here we have a defined matrix
+uh hadamard matrix of dimension two to
+their four and we're going to visualize
+that using m show
+and you'll see the pattern
+of the hadamard kind of emerges out
+quite nicely
+okay so let's move on to the next
+section
+[Music]
+okay so now we're going to take a look
+at sparse matrices and this will
+probably be one of the most important
+sections
+of this um
+of 6.1 or even the entire week so if
+there's anything you can take away from
+this is these are important
+and the reason being is that if you are
+doing large calculations
+which appear frequently in quantum
+phonics because you're dealing with this
+exponentially growing a classical system
+to simulate the quantum
+the quantum system that you're
+representing
+sparse matrices become extremely useful
+and they're kind of loosely defined
+they're just a matrix with
+loads of zero elements
+and when you're dealing with this rather
+than defining
+an entire matrix with a bunch of zeros
+and then some elements have
+different values
+you actually just define the location of
+where those values are and then it is
+assumed that the rest of the values are
+zero
+if that makes sense so there's a point
+where that becomes really memory
+efficient when you have a certain amount
+of zeros in your matrix
+so let's show you how this works we're
+going to use this function here
+scipy.sparse.csor
+matrix
+we're going to input this array here
+that i've defined you can see it has
+many zeros and three of the elements are
+non-zero
+we plug that into our function
+i'm going to print out the type and
+a itself
+we see that we get a sparse matrix type
+you can see the matrix representation
+here
+and then the sparse matrix
+representation here
+so you can see what memory we're using
+with sparse here where
+we have
+two indexes for a location in our matrix
+and then the actual element itself
+and then that repeats for each element
+whereas
+in the matrix representation we have
+nine
+you know numbers being stored
+essentially
+so
+imagine you had a you know a thousand by
+a thousand matrix with maybe
+50 elements that were non-zero
+you can see that this this kind of
+representation becomes more memory
+efficient as it uses less indicators of
+what's actually going on
+now we can convert between the sparse
+matrix type and regular matrices
+using this two dense function
+or attribute i should say
+so as you can see we're going to apply a
+dot 2 dense
+we're going to see what that looks like
+we can also perform
+operations it's probably the most
+important thing on sparse matrices here
+i'm performing addition multiplication
+dot product
+and
+also multiplication by a vector you can
+do all of these things with sparse
+matrices
+and then we're just going to print out
+their
+regular matrix representation
+so here is just a two dense so we're
+converting from this to this
+it's fairly straightforward then a plus
+a
+a times a
+a dot a
+then printing out a again as
+the sparse matrix format
+and then a times some vector
+so
+you get a feel for when you should be
+defining something as a sparse matrix
+you'll notice that it speeds up
+computation greatly
+okay
+so one of the other things is that when
+you're initializing
+an empty sparse matrix
+what you would do
+is use this function
+lil matrix kind of like a wrapper
+um
+but
+we just set the dimension of the matrix
+here or the shape
+and then you can set individual elements
+of it down here
+so that could be more useful
+you can imagine that here we have
+already have a preset array
+however that might not be functional if
+storing that array is too difficult
+so it can be more useful to define it as
+a sparse array from the get-go and
+that's what this is used for
+so what i'm going to print out is a
+itself and then the dense version of a
+as you can see we have
+the sparse representation and then the
+regular representation
+okay
+so i'm going to move on to the next
+section just remember this is really
+really useful especially for quantum
+computing and mechanics
+[Music]
+now we're going to work with the matrix
+exponential in psi pi
+now if you recall the mathematical
+definition of this is
+this sum here for matrices of course
+and
+it is returned by the function
+linear algebra dot x
+p n
+and then you just call your matrix in
+there
+so here we're going to define a four
+dimensional hadamard matrix
+and i'm going to add in
+the normalization factor in front of
+that
+so it's actual an actual true hadamard
+matrix
+and then we're just going to print out
+its exponential as you can see that's
+returned here so it's fairly
+straightforward usage
+we can verify some
+common expressions so the exponential of
+a transpose is the same as the
+exponential of a and then transpose
+and the same pattern occurs with the
+hermitian conjugate so we can check
+whether that's true or not
+here i have the exponential of a being
+called
+a random complex
+n by n matrix
+so we're first getting its exponential
+then taking a transpose and then we're
+rounding it to three decimal places
+and similarly we're taking the transpose
+of a then finding its exponential and
+then rounding to three decimal places
+similarly we're going to do the same
+with the hermitian conjugate
+and we should get a true true matrices
+confirming these expressions are true
+now one other thing to note is that
+if matrices don't commute then
+the
+[Music]
+multiplication of
+two exponential matrices
+will not correspond to the exponential
+of their sum
+but rather if they do commute then that
+will be true so we're just going to
+confirm that this is the case
+so i've defined two matrices here a and
+b
+and they commute
+and we're going to
+check whether
+their
+multiplication is the same as their
+exponential of the saw
+and print out that value and then i've
+defined two matrices that don't commute
+a and b again i've redefined them
+and we're going to check the same
+expression
+and you see we've got a true matrix on a
+false matrix so that's confirmed
+okay so let's move on to the next
+section so now we're going to take a
+look at unitary matrices and how we
+generate them in sci pi
+now unitary matrices of course you might
+be familiar with them they are the bread
+and butter of quantum mechanics and
+quantum computing
+for example if you have some sort of
+quantum circuit that translates directly
+into a unitary matrix
+and that will characterize the entire
+operation of that circuit
+now if you recall they're simply defined
+by
+the hermitian conjugate of a matrix
+if that is the
+multiplicative it's a hardware to say
+inverse
+of that matrix
+then
+that matrix is called a unitary matrix
+and it that includes left and right
+multiplication of said
+hermitian conjugate
+so the hadamard
+again you may be familiar with is a
+hermitian sorry
+a unitary matrix
+however we need to in sci-fi define this
+kind of
+coefficient to make sure that that is
+actually true where you
+multiply by one divided by the square
+root of n or the dimension of the matrix
+here we have a four-dimensional hadamard
+i'm converting that to a numpy matrix
+and then using the attributes of numpy
+matrices to multiply and check whether
+these conditions are true
+and then we're just going to print out
+the result of multiplying by the
+multiplicative inverse
+so indeed we get the identity for the
+last result and then a true matrix for
+this result here which makes sense
+now in psi pi we can generate random
+unitary matrices using the stats library
+in particular
+unitarygroup.org vs
+and then you just input the dimension
+and this will give you a complex
+unitary matrix or complex random unitary
+matrix
+so we're going to check its unitary
+nature
+here i have the conjugate transpose or
+the hermitian dotted with the matrix
+itself
+and then i'm rounding it for clarity
+and i'm just going to repeat this
+operation casting into numpy matrices
+where you can instead use
+u dot h
+times u so just recall the differences
+between
+numpy arrays and numpy matrices
+and as you can see we get
+you know the identity here
+and the identity here which adds up
+however you notice these kind of ghostly
+minus signs that's just kind of a result
+of the multiplication of floats in
+python
+and kind of rounding them makes them
+disappear or
+to a certain extent to disappear
+um if you want to be more precise
+obviously you can take away this round
+function but this is just a
+demonstration if you're doing say a
+research paper or some sort of
+you know actual scientific study
+then maybe don't be so flimsy with us
+but we're physicists so who cares
+okay so let's move on to the next
+section
+[Music]
+okay so now we're going to take a look
+at the tensor product again another key
+operation in quantum mechanics and
+computing
+and i'm going to just give you a quick
+example if you're writing a quantum
+circuit and you have various
+quantum gates acting on your qubits
+those operations are connected by the
+tensor product if you take a tensor
+product between all of the gates you
+apply to your qubits that will form some
+sort of unitary matrix that represents
+the entire quantum circuit itself so
+again a very useful
+um
+function
+here's an example here we have two
+two by two matrices and we're going to
+perform
+a tensor product on them and you see we
+get the first element
+of a is multiplied by the entire matrix
+b
+and similarly each element of a does the
+same thing
+and then it kind of expands the
+dimensions of these matrices into
+four by four
+so it's an expansive
+function that's something to keep in
+mind
+this can result in kind of giant
+matrices and of course
+if we're working with gigantic matrices
+it's often useful to work with sparse
+matrices so here i have both
+a dense and sparse version of using this
+operation
+scipy.sparse.cron
+or chronicer
+i'll call your
+chronicler products that's exactly what
+this is
+so
+i have defined two two by two arrays
+and you can perform direct tensor
+product on them
+just by calling scipy.sparse.cron
+and then this will all be done in kind
+of a dense
+format
+and then i have cast these two matrices
+into sports sparse spores sparse format
+and then again you can use the same
+function on them and it will result in a
+sparse representation
+so i've printed these out you should get
+a dense result and a sparse result
+so you can use this function at your
+leisure on dense or sparse matrices
+and if you're getting into very large
+quantum circuits then
+obviously it'll be much more useful to
+use a sparse
+alternate alteration let's say
+okay so we're going to leave it there
+and move on to the next section
+[Music]
+so another function that we can use in
+the linear algebra part of pi is
+actually least square fitting
+and the way in which we do this is
+if we have some sort of
+matrix a describing
+functions that let's say
+sum to give y in this example the x
+squared plus x
+then they will form the parts of that
+matrix
+and they have certain coefficients c1
+and c2 and that's what we're going to be
+approximating using the least square fit
+or guessing
+now to do this we're going to use some
+noisy data we're going to generate noisy
+data for certain x values and try and
+approximate it with the least square fit
+the y input here is going to be our
+noisy data
+okay so
+we're going to set c1 to a half and c2
+to 2
+and then we're going to generate noisy
+data we do this down here
+here we have
+values just between 0 and 10
+and we have y values corresponding to c1
+and c2 and then we're just going to add
+noise to them
+by
+adding on this value here
+now
+we're creating the matrix a
+by doing
+a concatenation of
+x squared and x these arrays
+and we're going to use the numpy
+c underscore function and this basically
+concatenates along the second axis
+so i'm going to show and print the value
+of a here
+as you can see we get kind of two
+columns here
+and we have 0 to 100 and 0 to 10
+corresponding to x squared and x
+and we have our noise so we should be
+able to input into our function just
+like a noise
+and this will return a tuple of values
+including the residuals of the least
+square fit the rank and sigma but we're
+most concerned with the value c here
+which is an array
+of um the basically the result
+coefficients that uh approximate the fit
+so we're going to generate new data y2
+that is our line
+or our fit line
+and we're going to plot
+the
+noise and we're going to plot the fit
+both against x
+and we should get this nice fit here
+brilliant
+and we can also print out the values of
+c
+and we get 0.16 and 5.35
+and of course these are going to be a
+lot different to the initial values we
+set
+because we didn't actually
+add on noise in both directions we only
+added it kind of shifting the line
+upwards
+but
+you can see that it's a nice fit here
+anyway and this function works
+okay so let's move on to the next
+section
+[Music]
