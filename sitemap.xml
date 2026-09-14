@@ -4,4 +4,22 @@
   <url>
     <loc>http://localhost:3000</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/week1-intro</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/setting-env</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/git-github</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/python-funds</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/week1-ex1</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/week1-tut1</loc>
+  </url>
 </urlset>
