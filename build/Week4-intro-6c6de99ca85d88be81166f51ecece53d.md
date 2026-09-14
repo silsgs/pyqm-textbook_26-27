@@ -1,0 +1,96 @@
+# Week 4
+
+## Part 0. Python libraries for scientific computing
+- 0.1 Installing Libraries
+- 0.2 Importing Libraries
+
+## Part 1. Numpy for numerical computations
+- 1.1 Introduction to Numpy
+- 1.2 Numpy Objects: N-dimensional arrays
+  - 1.2.1 Array Attributes
+  - 1.2.2 Array Indexing & Slicing
+  - 1.2.3 Array Creation Functions
+  - 1.2.4 Array Operations
+    - Statistical functions
+    - Linear Algebra operations
+    - Reshaping and Transposing
+    - Stacking and Splitting
+    - Sorting and Searching
+    - Input and Output
+    - Copying and Masking
+    - Important methods for working with Matrices and Vectors
+- 1.3 Non-numeric data types in Numpy
+- 1.4 Linear algebra with Numpy
+  - 1.4.1 Scalar Array/Matrix Operations
+  - 1.4.2 Array-Array Operations
+  - 1.4.3 Matrix Multiplication and Dot Product
+  - 1.4.4 Other Linear Algebra Operations
+- 1.5 Some useful Numpy tools
+  - 1.5.1 Random Numbers
+  - 1.5.2 Polynomial Fitting
+
+## Part 2. Matplotlib for data visualization
+- 2.1 Matplotlib Pyplot
+- 2.2 Line Plots
+  - 2.2.1 Lines
+  - 2.2.2 Colour
+  - 2.2.3 Width
+  - 2.2.4 Line style
+  - 2.2.5 Marker Types
+  - 2.2.6 Axes
+    - Limits
+    - Ticks
+  - 2.2.7 Grid
+  - 2.2.8 Labels
+    - Title
+    - Axis Lables
+  - 2.2.9 Legends
+  - 2.2.10 Error Bars
+  - 2.2.11 Asymptotes and Annotations
+  - 2.2.12 Log-log and Semi-log plots
+- 2.3 Figure object
+- 2.4 Multiple plots
+  - 2.4.1 2.4.1 Making sub-plots using `plt.subplot()`
+  - 2.4.2 Plots in Plots
+  - 2.4.3 Making sub-plots using `fig.add_subplot()`
+  - 2.4.4 Making sub-plots using `plt.subplots()`
+  - 2.4.5 Histogram
+  - 2.4.6 Scatter
+  - 2.4.7 Bar Chart
+  - 2.4.8 Pie Chart
+- 2.5 3D plots and animations
+  - 2.5.1 3D Line Plots
+  - 2.5.2 Heat Map
+  - 2.5.3 Plotting a Surface
+  - 2.5.4 Interactive backends
+  - 2.5.5 Animations
+
+## Part 3. SciPy for scientific computing
+- 5.1 Scipy Linear Algebra
+    - 5.1.1 Linear Systems
+    - 5.1.2 Spectral Decomposition
+    - 5.1.3 Matrix Functions
+    - 5.1.4 Sparse Matrices
+    - 5.1.5 Matrix Exponential
+    - 5.1.6 Unitary Matrix
+    - 5.1.7 Tensor Product
+    - 5.1.8 Linalg Least Square Fit
+    - 5.1.9 Single Value Decomposition
+    - 5.1.10 Schur Decomposition
+- 5.2 Scipy Optimization
+    - 5.2.1 Function Minimum
+    - 5.2.2 Global Optimization
+    - 5.2.3 Function Roots
+    - 5.2.4 Optimize Least Square Fit
+    - 5.2.5 Curve Fit
+- 5.3 Scipy Fourier Transform 
+    - 5.3.1 The Fourier Transform
+    - 5.3.2 Wave Packet
+    - 5.3.3 The Uncertainty Principle
+    - 5.3.4 Quantum Fourier Transform
+    - 5.3.5 The Bloch Sphere
+- 5.4 Scipy ODEs & PDEs
+    - 5.4.1 Integration
+    - 5.4.2 ODE
+    - 5.4.3 Finite Difference Method
+    - 5.4.4 PDE
