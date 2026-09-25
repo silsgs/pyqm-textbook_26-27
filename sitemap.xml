@@ -46,4 +46,13 @@
   <url>
     <loc>http://localhost:3000/week2-tut2</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/week3-intro</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/function</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/classes</loc>
+  </url>
 </urlset>
