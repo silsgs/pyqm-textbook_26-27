@@ -55,4 +55,19 @@
   <url>
     <loc>http://localhost:3000/classes</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/week4-intro</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/importing-libs</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/numpy-basics</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/matplotlib</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/pd-sns</loc>
+  </url>
 </urlset>
