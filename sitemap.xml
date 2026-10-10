@@ -5,6 +5,9 @@
     <loc>http://localhost:3000</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/index</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/week1-intro</loc>
   </url>
   <url>
@@ -21,53 +24,5 @@
   </url>
   <url>
     <loc>http://localhost:3000/week1-tut1</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/week2-intro</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/recap</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/flow-control</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/compact-code</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/external-data</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/cheatsheet</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/week2-ex2</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/week2-tut2</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/week3-intro</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/function</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/classes</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/week4-intro</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/importing-libs</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/numpy-basics</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/matplotlib</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/pd-sns</loc>
   </url>
 </urlset>
