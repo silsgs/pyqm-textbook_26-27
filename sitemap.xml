@@ -76,4 +76,7 @@
   <url>
     <loc>http://localhost:3000/scipy</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/pytorch</loc>
+  </url>
 </urlset>
