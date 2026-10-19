@@ -79,4 +79,16 @@
   <url>
     <loc>http://localhost:3000/pytorch</loc>
   </url>
+  <url>
+    <loc>http://localhost:3000/week6-intro</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/installation</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/qiskit</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/qutip</loc>
+  </url>
 </urlset>
